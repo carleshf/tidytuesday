@@ -46,8 +46,8 @@ p1 <- ggplot(tidy_anime, aes(x = genre, y = decade_fac, fill = score)) +
     legend.position = "none",
     axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5)
   ) +
-  xlab("Genere") + ylab("Decade") +
-  ggtitle("Score by genere and decade")
+  xlab("Genre") + ylab("Decade") +
+  ggtitle("Score by genre and decade")
 p2 <- ggplot(tidy_anime, aes(x = source, y = decade_fac, fill = score)) +
   geom_tile() +
   scale_fill_distiller(palette = "Spectral", limits = c(0, 10)) +
@@ -69,5 +69,5 @@ pg <- plot_grid(
 )
 pg
 
-ggsave(pg, file = "anime_score_by_genere_source_decade.png")
+ggsave(pg, file = "anime_score_by_genre_source_decade.png")
 ```
