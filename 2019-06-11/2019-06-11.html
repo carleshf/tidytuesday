@@ -402,7 +402,8 @@ library(ggthemes)</code></pre>
 ##     map</code></pre>
 <pre class="r"><code>meteorites2 &lt;- meteorites %&gt;% filter(year &gt;= 2010)
 
-plot_meteor &lt;- world + geom_point(data = meteorites2, aes(x = long, y = lat, size = log_mass), color = &quot;#ffa500&quot;, alpha = 0.7) +
+plot_meteor &lt;- world + 
+  geom_point(data = meteorites2, aes(x = long, y = lat, size = log_mass), color = &quot;#ffa500&quot;, alpha = 0.7) +
   theme(legend.position = &quot;none&quot;)
 
 ggsave(plot_meteor, file = &quot;plot_meteor.jpg&quot;)</code></pre>

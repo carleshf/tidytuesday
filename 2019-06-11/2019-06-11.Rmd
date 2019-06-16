@@ -37,7 +37,8 @@ world <- ggplot() +
 
 meteorites2 <- meteorites %>% filter(year >= 2010)
 
-plot_meteor <- world + geom_point(data = meteorites2, aes(x = long, y = lat, size = log_mass), color = "#ffa500", alpha = 0.7) +
+plot_meteor <- world + 
+  geom_point(data = meteorites2, aes(x = long, y = lat, size = log_mass), color = "#ffa500", alpha = 0.7) +
   theme(legend.position = "none")
 
 ggsave(plot_meteor, file = "plot_meteor.jpg")
